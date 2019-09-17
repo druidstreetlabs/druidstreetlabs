@@ -18,6 +18,10 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
+  "scripts": {
+    "dev": "npx @bnguyensn/bundler dev",
+    "prod": "npx @bnguyensn/bundler prod"
+  },
   "@bnguyensn/bundler": {
     "entryPath": "src/index.js",
     "htmlWebpackPluginTemplatePath": "src/assets/html/index.html",

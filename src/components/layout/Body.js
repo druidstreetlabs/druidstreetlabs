@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Body() {
-  return <div className="body"></div>;
+  return <div className="body">Hello, world!</div>;
 }
