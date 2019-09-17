@@ -1,0 +1,26 @@
+{
+  "name": "druidstreetlabs.dev",
+  "version": "1.0.0",
+  "description": "Druid Street Labs' website",
+  "main": "src/index.js",
+  "author": "@bnguyensn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/druidstreetlabs/druidstreetlabs.git"
+  },
+  "private": false,
+  "devDependencies": {
+    "@bnguyensn/bundler": "^2.5.3",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "@bnguyensn/bundler": {
+    "entryPath": "src/index.js",
+    "htmlWebpackPluginTemplatePath": "src/assets/html/index.html",
+    "htmlWebpackPluginFaviconPath": "src/assets/images/favicon/favicon.ico"
+  }
+}
