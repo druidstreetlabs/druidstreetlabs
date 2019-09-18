@@ -12,6 +12,13 @@
   "private": false,
   "devDependencies": {
     "@bnguyensn/bundler": "^2.5.3",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
     "prettier": "^1.18.2"
   },
   "dependencies": {
@@ -20,7 +27,14 @@
   },
   "scripts": {
     "dev": "npx @bnguyensn/bundler dev",
-    "prod": "npx @bnguyensn/bundler prod"
+    "prod": "npx @bnguyensn/bundler prod",
+    "lint": "eslint \"src/**/*.@(jsx|js)\"",
+    "prettify": "prettier --write \"src/**/*.@(jsx|js|json|css)\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "@bnguyensn/bundler": {
     "entryPath": "src/index.js",

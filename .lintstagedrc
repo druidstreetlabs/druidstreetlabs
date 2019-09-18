@@ -1,0 +1,4 @@
+{
+  "*.@(jsx|js)": ["yarn lint"],
+  "*.@(jsx|js|json|css)": ["yarn prettify", "git add"],
+}

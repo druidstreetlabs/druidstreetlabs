@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": { "version": "detect" }
+  },
+  "rules": {
+    "react/prop-types": "off"
+  }
+}
