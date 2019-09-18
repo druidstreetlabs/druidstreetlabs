@@ -7,6 +7,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 // Debug - The constant DEFINEPLUGIN.DEVMODE is injected by webpack's
 // DefinePlugin. See the webpack config file.
+// eslint-disable-next-line no-undef
 if (DEFINEPLUGIN_DEVMODE) {
   console.log('Application running in development mode.');
 }

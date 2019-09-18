@@ -1,0 +1,81 @@
+/* ********** Experiment ********** */
+
+.experiment {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'thumbnail thumbnail thumbnail thumbnail thumbnail'
+    'name name name name id'
+    'url repository . . .'
+    'description description description description description';
+}
+
+/* ********** Thumbnail ********** */
+
+.thumbnail {
+  position: relative;
+  grid-area: thumbnail;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 1rem;
+}
+
+.thumbnail > * {
+  border-radius: 5px;
+}
+
+.thumbnailShadowDark,
+.thumbnailShadowLight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.33s;
+}
+
+.thumbnailShadowDark {
+  box-shadow: inset 0 0 5px #424242;
+}
+
+.thumbnailShadowLight {
+  opacity: 0;
+  box-shadow: inset 0 0 10px #bdbdbd;
+}
+
+.thumbnail:hover .thumbnailShadowDark {
+  opacity: 0;
+}
+
+.thumbnail:hover .thumbnailShadowLight {
+  opacity: 1;
+}
+
+.thumbnailImg {
+}
+
+.name {
+  grid-area: name;
+}
+
+.socialMedia {
+  width: 32px;
+  height: 32px;
+}
+
+.id {
+  grid-area: id;
+}
+
+.url {
+  grid-area: url;
+}
+
+.repository {
+  grid-area: repository;
+}
+
+.description {
+  grid-area: description;
+}
