@@ -1,0 +1,30 @@
+.body {
+  padding: 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 14, 255, 1) 0%,
+    rgba(106, 0, 255, 1) 50%,
+    rgba(255, 0, 241, 1) 100%
+  );
+}
+
+.block-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-gap: 2rem;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #212121;
+  font: 5rem 'Cabin', sans-serif;
+  color: #ffffff;
+  box-shadow: #212121 0 3px 10px;
+}

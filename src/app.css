@@ -1,0 +1,14 @@
+.app {
+  height: 100vh;
+}
+
+.separator {
+  height: 2px;
+}
+
+.grey-300 {
+  background-color: #e0e0e0;
+}
+.main-600 {
+  background-color: #3f51b5
+}
