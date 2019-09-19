@@ -1,62 +1,59 @@
 import React from 'react';
 import classes from './experiment.module.css';
-import githubUrl from '../../assets/images/svg/github.svg';
-import chromeUrl from '../../assets/images/svg/googlechrome.svg';
+// import githubUrl from '../../assets/images/svg/github.svg';
 
-function Thumbnail({ name, url }) {
+function Thumbnail({ name, imgUrl }) {
   return (
     <div className={classes.thumbnail}>
       <img
         className={classes.thumbnailImg}
-        src={url}
+        src={imgUrl}
         alt={`${name}'s thumbnail`}
       />
-      <div className={classes.thumbnailShadowDark} />
-      <div className={classes.thumbnailShadowLight} />
     </div>
   );
 }
 
-function Name({ name }) {
-  return <h2 className={classes.name}>{name}</h2>;
+function Details({ children }) {
+  return <div className={classes.details}>{children}</div>;
 }
 
-function ID({ id }) {
-  return <h3 className={classes.id}>{id}</h3>;
-}
-
-function SocialMedia({ type, url }) {
+function Name({ name, url }) {
   return (
-    <div
-      className={`${classes.socialMedia} ${
-        type === 'github' ? classes.repository : classes.url
-      }`}
-    >
-      <a href={url}>
-        <img
-          src={type === 'github' ? githubUrl : chromeUrl}
-          alt={type === 'github' ? 'GitHub logo' : 'Chrome logo'}
-        />
+    <h2 className={classes.name}>
+      <a href={url} rel="noopener noreferrer" target="_blank">
+        {name}
       </a>
-    </div>
+    </h2>
   );
 }
+
+// function SocialMedia({ github }) {
+//   return (
+//     <div className={classes.socialMedia}>
+//       <a href={github}>
+//         <img src={githubUrl} alt="GitHub logo" />
+//       </a>
+//     </div>
+//   );
+// }
 
 function Description({ description }) {
   return <p className={classes.description}>{description}</p>;
 }
 
 export default function Experiment({ data }) {
-  const { id, name, url, repository, description, thumbnail } = data;
+  const { name, url, description, thumbnail } = data;
 
   return (
     <div className={classes.experiment}>
-      <Thumbnail name={name} url={thumbnail} />
-      <Name name={name} />
-      <ID id={id} />
-      <SocialMedia type="internet" url={url} />
-      <SocialMedia type="github" url={repository} />
-      <Description description={description} />
+      <div className={classes.experimentShadowNormal} />
+      <div className={classes.experimentShadowHover} />
+      <Thumbnail name={name} imgUrl={thumbnail} />
+      <Details>
+        <Name name={name} url={url} />
+        <Description description={description} />
+      </Details>
     </div>
   );
 }
