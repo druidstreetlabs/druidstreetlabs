@@ -34,10 +34,13 @@ export default function Background() {
         <Circle
           radius={1000}
           styles={{
+            position: 'absolute',
             top: -500,
             right: -500,
             borderTop: '5px solid #5c6cc0',
+            borderRight: '5px solid transparent',
             borderBottom: '5px solid #5c6cc0',
+            borderLeft: '5px solid transparent',
             opacity: 0.5,
           }}
         />

@@ -7,7 +7,7 @@ const useStyles = createUseStyles({
     '100%': { transform: 'rotate(359deg)' },
   },
   circle: props => ({
-    position: 'absolute',
+    // position: 'absolute',
     width: props.radius,
     height: props.radius,
     borderRadius: '50%',

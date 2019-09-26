@@ -12,6 +12,12 @@
   "private": false,
   "devDependencies": {
     "@bnguyensn/bundler": "^2.5.3",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-knobs": "^5.2.1",
+    "@storybook/addon-links": "^5.2.1",
+    "@storybook/addon-notes": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
+    "@storybook/react": "^5.2.1",
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -30,7 +36,9 @@
     "dev": "npx @bnguyensn/bundler dev",
     "prod": "npx @bnguyensn/bundler prod",
     "lint": "eslint \"src/**/*.@(jsx|js)\"",
-    "prettify": "prettier --write \"src/**/*.@(jsx|js|json|css)\""
+    "prettify": "prettier --write \"src/**/*.@(jsx|js|json|css)\"",
+    "storybook": "start-storybook -p 6006 --ci",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
