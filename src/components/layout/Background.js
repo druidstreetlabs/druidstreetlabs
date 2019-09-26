@@ -17,6 +17,41 @@ const useStyles = createUseStyles({
     zIndex: -1,
     overflow: 'hidden',
   },
+
+  // Shapes
+  circle1: {
+    position: 'absolute',
+    top: -500,
+    right: -500,
+    border: '5px solid transparent',
+    borderColor: '#5c6cc0 transparent',
+    opacity: 0.5,
+    animation: '$spin 15s linear 0s infinite running',
+  },
+  circle2: {
+    position: 'absolute',
+    top: -400,
+    right: -400,
+    border: '15px solid transparent',
+    borderColor: '#5c6cc0 transparent',
+    opacity: 0.33,
+    animation: '$spin 10s linear 0s infinite reverse running',
+  },
+  circle3: {
+    position: 'absolute',
+    top: -200,
+    right: -200,
+    border: '25px solid transparent',
+    borderColor: 'transparent #5c6cc0',
+    opacity: 0.25,
+    animation: '$spin 2.5s linear 0s infinite running',
+  },
+
+  // Animations
+  '@keyframes spin': {
+    '0%': { transform: 'rotate(0deg)' },
+    '100%': { transform: 'rotate(359deg)' },
+  },
 });
 
 export default function Background() {
@@ -25,18 +60,10 @@ export default function Background() {
   return (
     <div className={classes.background}>
       {/*<BackgroundDivider color="linear-gradient(45deg, rgba(124,89,192,1) 0%, rgba(92,108,192,1) 50%, rgba(77,152,181,1) 100%)" />*/}
-      <BackgroundCurtain />
 
-      <Circle
-        radius={1000}
-        styles={{
-          top: -500,
-          right: -500,
-          borderTop: '5px solid #5c6cc0',
-          borderBottom: '5px solid #5c6cc0',
-          opacity: 0.5,
-        }}
-      />
+      <Circle radius={1000} className={classes.circle1} />
+      <Circle radius={800} className={classes.circle2} />
+      <Circle radius={400} className={classes.circle3} />
 
       <Hexagon
         top={100}
@@ -88,6 +115,8 @@ export default function Background() {
         topColor="9D7FD7"
         bottomColor="9D7FD7"
       />
+
+      <BackgroundCurtain />
     </div>
   );
 }
