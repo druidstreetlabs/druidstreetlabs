@@ -6,9 +6,13 @@
 @import-normalize;
 @import url('https://fonts.googleapis.com/css?family=Cabin|Open+Sans&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   margin: 0;
-  font: 20px 'Open Sans', sans-serif;
+  font: 16px 'Open Sans', sans-serif;
 }
 
 body {
@@ -29,17 +33,4 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: #5c6bc0;
-}
-
-.bg-primary {
-  background-color: #5c6bc0; /* Indigo 400 */
-}
-
-.color-primary {
-  color: #5c6bc0; /* Indigo 400 */
 }

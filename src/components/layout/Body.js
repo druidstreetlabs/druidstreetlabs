@@ -1,11 +1,15 @@
 import React from 'react';
-import Portfolio from '../portfolio/Portfolio';
-import './body.css';
+import { createUseStyles } from 'react-jss';
+
+const useStyles = createUseStyles({
+  body: {
+    padding: '2rem',
+    minHeight: '100vh',
+  },
+});
 
 export default function Body() {
-  return (
-    <div className="body">
-      <Portfolio />
-    </div>
-  );
+  const classes = useStyles();
+
+  return <div className={classes.body}>{/*<Portfolio />*/}</div>;
 }
